@@ -71,6 +71,14 @@ const NewsFeedList: React.FC = () => {
   // Just ignore the error in such cases to avoid showing unnecessary error messages to users
   const shouldShowError = error && articles.length === 0;
 
+  if (shouldShowError) {
+    return (
+      <View style={CommonStyles.centeredView}>
+        <Text>Error fetching news: {error.message}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={CommonStyles.container}>
       <FlatList
@@ -93,10 +101,6 @@ const NewsFeedList: React.FC = () => {
           ) : null
         }
       />
-
-      {shouldShowError && (
-        <Text>Error fetching news: {error.message}</Text> // Display error message when no articles are in state
-      )}
     </View>
   );
 };
