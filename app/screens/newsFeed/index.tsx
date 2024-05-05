@@ -1,5 +1,6 @@
 import CustomSwipeButton from 'app/components/button/swipeButton'; // Custom swipe button component
 import CommonStyles from 'app/theme/common.styles'; // Common styles used throughout the app
+import {COLORS} from 'app/theme/theme.style';
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import NewsFeedList from './components/newsFeedList'; // The component that displays the list of news
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     textAlign: 'center',
-    color: '#666',
+    color: COLORS.mediumGray,
     marginVertical: 10,
     marginBottom: 30,
   },

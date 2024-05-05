@@ -1,5 +1,6 @@
+import {COLORS} from 'app/theme/theme.style';
 import React, {useEffect, useState} from 'react';
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import {PanGestureHandler} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, {
@@ -142,15 +143,14 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({onSwipeRight}) => {
 // Styles for the swipe button and other elements
 const styles = StyleSheet.create({
   container: {
-    height: BUTTON_HEIGHT, // Height of the container
-    width: BUTTON_WIDTH, // Width of the container
-    backgroundColor: '#f2f2f2', // Background color
-    borderRadius: 50, // Rounded corners
-    justifyContent: 'center', // Center content vertically
-    alignItems: 'center', // Center content horizontally
-    alignSelf: 'center', // Center the container on the screen
-    borderWidth: 1, // Border thickness
-    borderColor: '#1b9aaa', // Border color
+    height: BUTTON_HEIGHT,
+    width: BUTTON_WIDTH,
+    backgroundColor: COLORS.extraLightGray,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.teal,
   },
   gradientBackground: {
     position: 'absolute', // Absolute positioning to ensure it sits below other elements
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18, // Font size for the text
-    color: '#1b9aaa', // Text color
+    color: COLORS.teal, // Text color
   },
 });
 

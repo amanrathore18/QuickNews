@@ -1,4 +1,5 @@
 import Skeleton from 'app/components/skeleton';
+import {COLORS} from 'app/theme/theme.style';
 import moment from 'moment'; // Library for date formatting
 import React from 'react'; // React to create components
 import {Image, StyleSheet, Text, View} from 'react-native'; // React Native components
@@ -63,9 +64,9 @@ const styles = StyleSheet.create({
     borderWidth: 1, // Border thickness
     borderRadius: 10, // Increased border radius for smoother corners
     overflow: 'hidden', // Prevent content from spilling out
-    backgroundColor: '#fff', // Background color for the card
+    backgroundColor: COLORS.white, // Background color for the card
     elevation: 3, // Shadow for Android
-    shadowColor: '#000', // Shadow color for iOS
+    shadowColor: COLORS.black, // Shadow color for iOS
     shadowOffset: {width: 0, height: 2}, // Shadow offset
     shadowOpacity: 0.25, // Shadow opacity
     shadowRadius: 3.84, // Shadow radius
@@ -88,18 +89,18 @@ const styles = StyleSheet.create({
   },
   publishedAt: {
     fontSize: 14, // Slightly smaller font for date
-    color: '#555', // Grey color
+    color: COLORS.darkGray, // Grey color
     marginTop: 5, // Margin above the date
     marginBottom: 10, // Margin below the date
   },
   description: {
     fontSize: 14, // Font size for description
-    color: '#333', // Dark grey color
+    color: COLORS.darkerGray, // Dark grey color
   },
   imagePlaceholder: {
     width: '100%', // Full width
     height: 180, // Same height as the image
-    backgroundColor: '#e0e0e0', // Light grey background for the placeholder
+    backgroundColor: COLORS.mediumLightGray, // Light grey background for the placeholder
   },
   mt5: {
     marginTop: 5,

@@ -49,7 +49,7 @@ const Skeleton = ({
           width, // Apply the specified width
           height, // Apply the specified height
           opacity: opacityValue, // Use the interpolated opacity value
-          backgroundColor: COLORS.black50, // Default skeleton color
+          backgroundColor: COLORS.lightGray, // Default skeleton color
           borderRadius, // Border radius for rounded corners
         },
         style, // Merge with any additional styles
