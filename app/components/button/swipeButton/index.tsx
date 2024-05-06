@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     borderWidth: 1,
+    alignItems: 'center',
     borderColor: COLORS.teal,
   },
   gradientBackground: {

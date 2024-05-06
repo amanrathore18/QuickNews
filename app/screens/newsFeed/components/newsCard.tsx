@@ -2,7 +2,8 @@ import Skeleton from 'app/components/skeleton';
 import {COLORS} from 'app/theme/theme.style';
 import moment from 'moment'; // Library for date formatting
 import React from 'react'; // React to create components
-import {Image, StyleSheet, Text, View} from 'react-native'; // React Native components
+import {StyleSheet, Text, View} from 'react-native'; // React Native components
+import FastImage from 'react-native-fast-image';
 
 // Define the NewsCard component props
 interface NewsCardProps {
@@ -32,10 +33,16 @@ const NewsCard: React.FC<NewsCardProps> = props => {
 
   return (
     <View style={styles.card}>
+      {/* // Add padding to the whole card including the image */}
       {article?.urlToImage ? (
-        // Add padding to the whole card including the image
         <View style={styles.cardImageContainer}>
-          <Image source={{uri: article.urlToImage}} style={styles.cardImage} />
+          <FastImage
+            source={{
+              uri: article.urlToImage,
+              priority: FastImage.priority.high,
+            }}
+            style={styles.cardImage}
+          />
         </View>
       ) : (
         <View style={styles.imagePlaceholder} />

@@ -60,8 +60,8 @@ const NewsFeedList: React.FC = () => {
   if (isLoading && articles.length === 0) {
     return (
       <View style={CommonStyles.container}>
-        {[0, 1, 2, 3, 4, 5].map(() => {
-          return <NewsCard loading />;
+        {[0, 1, 2, 3, 4, 5].map(i => {
+          return <NewsCard key={i.toString()} loading />;
         })}
       </View>
     );
